@@ -15,14 +15,14 @@ class InvoiceTest {
     }
 
     @Test
-    void ShouldReturnRegularPriceOfOneItemWithShippingCost() {
+    void ShouldReturnPriceOfOneItemWithShippingCost() {
         InvoiceItem item = new InvoiceItem(100);
         invoice.addItem(item);
         assertEquals(110, invoice.getTotalPrice());
     }
 
     @Test
-    void ShouldReturnRegularPriceOfTwoItem() {
+    void ShouldReturnPriceOfTwoItemWithShippingCost() {
         InvoiceItem item = new InvoiceItem(100);
         invoice.addItem(item);
         invoice.addItem(item);
